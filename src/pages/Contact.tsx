@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-4 bg-primary/50 bg-clip-text text-transparent">
               Get In Touch
             </h1>
             <p className="text-muted-foreground text-lg">
@@ -55,7 +55,7 @@ const Contact = () => {
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-primary p-3 rounded-full">
-                    <Mail className="h-5 w-5 text-white" />
+                    <Mail className="h-5 w-5 text-black" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
@@ -65,7 +65,7 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-primary p-3 rounded-full">
-                    <Phone className="h-5 w-5 text-white" />
+                    <Phone className="h-5 w-5 text-black" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
@@ -75,7 +75,7 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-primary p-3 rounded-full">
-                    <MapPin className="h-5 w-5 text-white" />
+                    <MapPin className="h-5 w-5 text-black" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
@@ -140,7 +140,7 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90"
+                    className="w-full bg-primary hover:opacity-90"
                     disabled={isLoading}
                   >
                     {isLoading ? "Sending..." : "Send Message"}

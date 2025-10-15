@@ -32,27 +32,27 @@ const Navbar = () => {
     <nav className="border-b bg-card shadow-soft">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center gap-2 text-xl font-bold bg-primary/80 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
             <Building2 className="h-6 w-6 text-primary" />
             PropPilot
           </Link>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" asChild className="hover:bg-muted transition-colors">
+            <Button variant="ghost" asChild className="hover:bg-muted hover:text-black transition-colors">
               <Link to="/" className="flex items-center gap-2">
                 <Home className="h-4 w-4" />
                 Home
               </Link>
             </Button>
 
-            <Button variant="ghost" asChild className="hover:bg-muted transition-colors">
+            <Button variant="ghost" asChild className="hover:bg-muted hover:text-black transition-colors">
               <Link to="/properties" className="flex items-center gap-2">
                 <Building2 className="h-4 w-4" />
                 Properties
               </Link>
             </Button>
 
-            <Button variant="ghost" asChild className="hover:bg-muted transition-colors">
+            <Button variant="ghost" asChild className="hover:bg-muted hover:text-black transition-colors">
               <Link to="/contact" className="flex items-center gap-2">
                 <MessageSquare className="h-4 w-4" />
                 Contact
@@ -62,7 +62,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <Button variant="ghost" asChild className="hover:bg-muted transition-colors">
-                  <Link to="/dashboard" className="flex items-center gap-2">
+                  <Link to="/dashboard" className="flex items-center text-black gap-2">
                     <User className="h-4 w-4" />
                     Dashboard
                   </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </Button>
               </>
             ) : (
-              <Button asChild className="bg-gradient-primary hover:opacity-90 transition-opacity">
+              <Button asChild className="bg-primary opacity-90 transition-opacity">
                 <Link to="/auth">Sign In</Link>
               </Button>
             )}

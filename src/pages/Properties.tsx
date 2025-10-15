@@ -65,7 +65,7 @@ const Properties = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-2 bg-primary bg-clip-text text-transparent">
             Browse Properties
           </h1>
           <p className="text-muted-foreground">Find your perfect property from our extensive listings</p>

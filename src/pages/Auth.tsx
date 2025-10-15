@@ -76,7 +76,7 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-hero p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+          <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold bg-primary/80 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
             <Building2 className="h-8 w-8 text-primary" />
             PropPilot
           </Link>
@@ -118,7 +118,7 @@ const Auth = () => {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90"
+                    className="w-full bg-primary hover:opacity-90"
                     disabled={isLoading}
                   >
                     {isLoading ? "Signing in..." : "Sign In"}
@@ -161,7 +161,7 @@ const Auth = () => {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90"
+                    className="w-full bg-primary hover:opacity-90"
                     disabled={isLoading}
                   >
                     {isLoading ? "Creating account..." : "Create Account"}

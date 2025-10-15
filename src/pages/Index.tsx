@@ -33,14 +33,14 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90" />
+          <div className="absolute inset-0" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl shadow-lg font-bold mb-6 animate-fade-in">
             Find Your Dream Property
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
+          <p className="text-xl shadow-lg md:text-2xl mb-8 opacity-90">
             Discover the perfect home or investment with PropPilot
           </p>
           <div className="flex gap-4 justify-center">
@@ -49,7 +49,7 @@ const Index = () => {
                 Browse Properties <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8">
+            <Button asChild size="lg" variant="outline" className="border-white text-white bg-white/20 text-lg px-8">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -67,7 +67,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg bg-card shadow-soft hover:shadow-medium transition-shadow">
               <div className="bg-gradient-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="h-8 w-8 text-white" />
+                <Search className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Easy Search</h3>
               <p className="text-muted-foreground">
@@ -77,7 +77,7 @@ const Index = () => {
 
             <div className="text-center p-6 rounded-lg bg-card shadow-soft hover:shadow-medium transition-shadow">
               <div className="bg-gradient-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building2 className="h-8 w-8 text-white" />
+                <Building2 className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Wide Selection</h3>
               <p className="text-muted-foreground">
@@ -87,7 +87,7 @@ const Index = () => {
 
             <div className="text-center p-6 rounded-lg bg-card shadow-soft hover:shadow-medium transition-shadow">
               <div className="bg-gradient-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-white" />
+                <Shield className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Verified Listings</h3>
               <p className="text-muted-foreground">
@@ -122,7 +122,7 @@ const Index = () => {
           )}
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90">
+            <Button asChild size="lg" className="bg-transparent text-black hover:bg-none hover:opacity-90">
               <Link to="/properties">
                 View All Properties <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

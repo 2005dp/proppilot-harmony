@@ -2,86 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 221 39% 11%;
+    /* --- Base Colors (Light Mode) --- */
+    /* Light background, dark text (high contrast) */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 220 39% 11%; /* Very Dark Slate Blue */
 
+    /* Card/Popover should match the main background/foreground for consistency */
     --card: 0 0% 100%;
-    --card-foreground: 221 39% 11%;
+    --card-foreground: 220 39% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 221 39% 11%;
+    --popover-foreground: 220 39% 11%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
+    /* --- Primary Brand (Blue) --- */
+    --primary: 221 83% 53%; /* Your vibrant Blue */
+    --primary-foreground: 0 0% 100%; /* White text on Blue */
 
-    --secondary: 189 94% 43%;
-    --secondary-foreground: 0 0% 100%;
+    /* --- Secondary Brand (Cyan/Teal - Adjusted Saturation/Lightness for better contrast) --- */
+    --secondary: 189 77% 49%; /* Slightly more saturated and brighter Teal */
+    --secondary-foreground: 0 0% 100%; /* White text on Teal */
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    /* --- Muted/Subtle (Improved contrast for better visibility) --- */
+    --muted: 220 14% 94%; /* Slightly darker background than your original 96% */
+    --muted-foreground: 220 9% 46%; /* Medium-dark gray text */
 
-    --accent: 27 96% 61%;
-    --accent-foreground: 0 0% 100%;
+    /* --- Accent (Orange/Warning) --- */
+    --accent: 27 96% 61%; /* Your vibrant Orange */
+    --accent-foreground: 0 0% 100%; /* White text on Orange */
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    /* --- Destructive (Red - Adjusted for better contrast on white) --- */
+    --destructive: 0 84% 53%; /* Deeper Red for better visibility */
+    --destructive-foreground: 0 0% 100%; /* White text on Red */
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    /* --- Borders/Input/Ring --- */
+    --border: 220 13% 89%; /* Slightly darker than 91% for better separation */
+    --input: 220 13% 89%;
+    --ring: 221 83% 53%; /* Matches primary color */
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(189 94% 43%));
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.1), hsl(189 94% 43% / 0.1));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    
-    --shadow-soft: 0 2px 8px hsl(221 83% 53% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(221 83% 53% / 0.12);
-    --shadow-strong: 0 8px 32px hsl(221 83% 53% / 0.16);
-    
+    /* Custom design tokens (Kept consistent with new colors) */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(220 14% 96%)); /* Slightly muted base for card gradient */
+
+    --shadow-soft: 0 2px 8px hsl(var(--primary) / 0.08);
+    --shadow-medium: 0 4px 16px hsl(var(--primary) / 0.12);
+    --shadow-strong: 0 8px 32px hsl(var(--primary) / 0.16);
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 221 39% 11%;
-    --foreground: 0 0% 98%;
+    /* --- Base Colors (Dark Mode) --- */
+    --background: 220 39% 11%; /* Very Dark Slate Blue (Background) */
+    --foreground: 0 0% 98%; /* Near White (Text) */
 
-    --card: 221 39% 15%;
+    /* Card/Popover slightly lighter than background for depth */
+    --card: 220 39% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 221 39% 15%;
+    --popover: 220 39% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 221 83% 53%;
+    /* --- Primary Brand (Blue) --- */
+    --primary: 221 83% 53%; /* Your vibrant Blue (Kept same) */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 189 94% 43%;
+    /* --- Secondary Brand (Cyan/Teal - Kept same as light mode for consistency) --- */
+    --secondary: 189 77% 49%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    /* --- Muted/Subtle (Improved contrast for better visibility) --- */
+    --muted: 217 25% 17%; /* Slightly lighter dark background */
+    --muted-foreground: 215 20% 75%; /* Brighter gray text for better contrast */
 
+    /* --- Accent (Orange/Warning - Kept same) --- */
     --accent: 27 96% 61%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 63% 31%;
+    /* --- Destructive (Red - Adjusted for better contrast on dark) --- */
+    --destructive: 0 63% 41%; /* Brighter Red than your original 31% */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
+    /* --- Borders/Input/Ring --- */
+    --border: 217 25% 25%; /* Lighter border than muted for definition */
+    --input: 217 25% 25%;
     --ring: 221 83% 53%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(189 94% 43%));
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.2), hsl(189 94% 43% / 0.2));
-    --gradient-card: linear-gradient(180deg, hsl(221 39% 15%), hsl(221 39% 18%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(220 39% 18%));
   }
 }
 
